@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gambar Berputar dan Tulisan Bergerak</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Tulisan bergerak */
+    .marquee {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      animation: moveText 1s linear infinite alternate;
+      font-size: 2em;
+      color: white;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(-100px); }
+      100% { transform: translateX(100px); }
+    }
+
+    /* Gambar berputar */
+    .rotating-image {
+      width: 250px;
+      margin-top: 100px;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee">🖕😸🖕</div>
+  <br>
+  <img class="rotating-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO2S4V4zxEwgcEUnu0ItFL6R5JuavU5cRMJ8QDEDenpfnS0DCwNQAwFd0URVhSxhFihZL8tr_0JdvaiMGGSCwaQ5ebkR_Z5WheB5l16IjTrvZeKm8TTxPdagZh0XBYuW2S-W02fo75yhf0nLjCkMeLxyG4fWIdLskyfufM2NFoUT_IyFsnavGNBrkZkAA/s406/halah-nyocot.png" alt="Gambar berputar">
+</body>
+</html>
